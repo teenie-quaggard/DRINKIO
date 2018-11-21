@@ -6,7 +6,7 @@ const headers = {
 
 handlers.home = function(req, res) {
   res.writeHead(200, headers);
-  res.end(data.greeting);
+  res.end();
 };
 
 handlers.notFound = function(req, res) {
