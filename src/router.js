@@ -1,8 +1,10 @@
-const handlers = require("./handlers");[]
+const handlers = require("./handlers");
+[];
 
 const routes = {
   "/": handlers.home,
   "/main.css": handlers.css,
+  "/reset.css": handlers.reset,
   "404": handlers.notFound
 };
 
