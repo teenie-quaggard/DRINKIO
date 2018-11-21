@@ -1,7 +1,12 @@
 const handlers = require("./handlers");
+[];
 
 const routes = {
   "/": handlers.home,
+  "/main.css": handlers.css,
+  "/reset.css": handlers.reset,
+  "/main.js": handlers.js,
+  "/dom.js": handlers.dom,
   "404": handlers.notFound
 };
 
