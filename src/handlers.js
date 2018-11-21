@@ -4,7 +4,8 @@ const path = require("path");
 
 const headers = {
   html: { "content-type": "text/html" },
-  css: { "content-type": "text/css" }
+  css: { "content-type": "text/css" },
+  js: { "content-type": "application/javascript" }
 };
 
 handlers.home = function(req, res) {
@@ -44,6 +45,34 @@ handlers.css = function(req, res) {
       res.end("<h1>Sorry</h1>");
     } else {
       res.writeHead(200, headers.css);
+      res.end(file);
+    }
+  });
+};
+
+handlers.js = function(req, res) {
+  const filePath = path.join(__dirname, "..", "public", "main.js");
+  fs.readFile(filePath, (err, file) => {
+    if (err) {
+      console.log(err);
+      res.writeHead(500, headers.js);
+      res.end("<h1>Sorry</h1>");
+    } else {
+      res.writeHead(200, headers.js);
+      res.end(file);
+    }
+  });
+};
+
+handlers.dom = function(req, res) {
+  const filePath = path.join(__dirname, "..", "public", "dom.js");
+  fs.readFile(filePath, (err, file) => {
+    if (err) {
+      console.log(err);
+      res.writeHead(500, headers.js);
+      res.end("<h1>Sorry</h1>");
+    } else {
+      res.writeHead(200, headers.js);
       res.end(file);
     }
   });
