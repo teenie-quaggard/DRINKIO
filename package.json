@@ -1,0 +1,25 @@
+{
+  "name": "drinkio",
+  "version": "1.0.0",
+  "description": "An app to choose your beer",
+  "main": "./public/main.js",
+  "scripts": {
+    "test": "tape ./src/tests.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-15/DRINKIO.git"
+  },
+  "author": "Drinkio team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-15/DRINKIO/issues"
+  },
+  "homepage": "https://github.com/fac-15/DRINKIO#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.6",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
