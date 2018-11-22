@@ -13,8 +13,6 @@ const routes = {
 };
 
 module.exports = function(req, res) {
-  console.log(queryString.parse(req.url));
-
   if (routes[req.url]) {
     routes[req.url](req, res);
   } else if (req.url.includes("query")) {
