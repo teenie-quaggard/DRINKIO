@@ -8,7 +8,8 @@ const headers = {
   html: { "content-type": "text/html" },
   css: { "content-type": "text/css" },
   js: { "content-type": "application/javascript" },
-  img: { "content-type": "image/jpg" }
+  img: { "content-type": "image/jpg" },
+  json: { "content-type": "application/json" }
 };
 
 handlers.home = function(req, res) {
@@ -114,8 +115,10 @@ handlers.query = function(req, res) {
   var firstFive = filtered.slice(0, 5);
   console.log(firstFive);
   console.log(firstFive.length);
+  // console.log(typeof firstFive);
 
-  // console.log("THIS IS A NEW LINE DAMNIT");
+  res.writeHead(200, headers.json);
+  res.end(JSON.stringify(firstFive));
 };
 
 handlers.notFound = function(req, res) {
