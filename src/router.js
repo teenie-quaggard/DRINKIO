@@ -7,6 +7,7 @@ const routes = {
   "/reset.css": handlers.reset,
   "/main.js": handlers.js,
   "/dom.js": handlers.dom,
+  "/image/background.jpg": handlers.image,
   "404": handlers.notFound
 };
 
