@@ -1,7 +1,7 @@
 const handlers = (module.exports = {});
 const fs = require("fs");
 const path = require("path");
-// const queryString = require("query-string");
+const queryString = require("query-string");
 
 const headers = {
   html: { "content-type": "text/html" },
@@ -100,7 +100,9 @@ handlers.image = function(req, res) {
   });
 };
 
-handlers.query = function(req, res) {};
+handlers.query = function(req, res) {
+  var searchString = queryString.parse(req.url);
+};
 
 handlers.notFound = function(req, res) {
   res.writeHead(404, headers);
