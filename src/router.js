@@ -1,5 +1,5 @@
 const handlers = require("./handlers");
-const queryString = require("query-string");
+// const queryString = require("query-string");
 // const query = "query";
 
 const routes = {

@@ -101,7 +101,8 @@ handlers.image = function(req, res) {
 };
 
 handlers.query = function(req, res) {
-  var searchString = queryString.parse(req.url);
+  var searchString = queryString.parse(req.url)["/query"];
+  console.log(searchString);
 };
 
 handlers.notFound = function(req, res) {
