@@ -1,7 +1,37 @@
-h1 {
-  color: red;
-}
 
 body {
   background-image: url("./image/background.jpg");
+  max-width: 100vw;
+  margin: auto;
+  padding: 10%;
+}
+
+h2 {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 5rem;
+}
+
+.form-container{
+  text-align: center;
+  align-items: center;
+}
+
+#cheerio {
+  font-family: 'Pacifico', cursive;
+  font-size: 6rem;
+}
+
+#time {
+  font-size: 4rem;
+}
+
+#beerInput {
+  padding: 20px;
+  width: 40vw;
+  border-radius: 20px;
+}
+
+input[type='text']{
+  font-family: 'Armata', sans-serif;
+  font-size: 1rem;
 }
