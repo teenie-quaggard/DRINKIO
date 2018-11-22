@@ -105,6 +105,7 @@ handlers.query = function(req, res) {
   var test = [];
   var searchString = queryString.parse(req.url)["/query"].toLowerCase();
   console.log(searchString);
+
   //console.log(beers["beers"][0].name);
   test = beers["beers"].filter(beer =>
     beer.name.toLowerCase().includes(searchString)
