@@ -5,7 +5,8 @@ const path = require("path");
 const headers = {
   html: { "content-type": "text/html" },
   css: { "content-type": "text/css" },
-  js: { "content-type": "application/javascript" }
+  js: { "content-type": "application/javascript" },
+  img: { "content-type": "image/jpg" }
 };
 
 handlers.home = function(req, res) {
@@ -73,6 +74,26 @@ handlers.dom = function(req, res) {
       res.end("<h1>Sorry</h1>");
     } else {
       res.writeHead(200, headers.js);
+      res.end(file);
+    }
+  });
+};
+
+handlers.image = function(req, res) {
+  const filePath = path.join(
+    __dirname,
+    "..",
+    "public",
+    "image",
+    "background.jpg"
+  );
+  fs.readFile(filePath, (err, file) => {
+    if (err) {
+      console.log(err);
+      res.writeHead(500, headers.img);
+      res.end("<h1>Sorry</h1>");
+    } else {
+      res.writeHead(200, headers.img);
       res.end(file);
     }
   });
