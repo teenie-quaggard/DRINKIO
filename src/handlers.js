@@ -100,6 +100,8 @@ handlers.image = function(req, res) {
   });
 };
 
+handlers.query = function(req, res) {};
+
 handlers.notFound = function(req, res) {
   res.writeHead(404, headers);
   res.end("Resource not found");

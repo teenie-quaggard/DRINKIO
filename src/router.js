@@ -18,7 +18,7 @@ module.exports = function(req, res) {
   if (routes[req.url]) {
     routes[req.url](req, res);
   } else if (req.url.includes(query)) {
-    console.log("uuu");
+    handlers.query(req, res);
   } else {
     routes[404](req, res);
   }
