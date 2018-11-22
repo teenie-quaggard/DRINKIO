@@ -104,7 +104,7 @@ handlers.image = function(req, res) {
 handlers.query = function(req, res) {
   var searchString = queryString.parse(req.url)["/query"];
   console.log(searchString);
-  console.log(beers["beers"][0].name);
+  console.log(beers["beers"][0].name.includes('i'));
 };
 
 handlers.notFound = function(req, res) {
