@@ -1,6 +1,7 @@
 const handlers = (module.exports = {});
 const fs = require("fs");
 const path = require("path");
+const queryString = require("query-string");
 
 const headers = {
   html: { "content-type": "text/html" },
@@ -97,6 +98,11 @@ handlers.image = function(req, res) {
       res.end(file);
     }
   });
+};
+
+handlers.query = function(req, res) {
+  var searchString = queryString.parse(req.url)["/query"];
+  console.log(searchString);
 };
 
 handlers.notFound = function(req, res) {
