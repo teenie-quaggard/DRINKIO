@@ -102,16 +102,20 @@ handlers.image = function(req, res) {
 };
 
 handlers.query = function(req, res) {
-  var test = [];
+  var filtered = [];
   var searchString = queryString.parse(req.url)["/query"].toLowerCase();
   console.log(searchString);
 
   //console.log(beers["beers"][0].name);
-  test = beers["beers"].filter(beer =>
+  filtered = beers["beers"].filter(beer =>
     beer.name.toLowerCase().includes(searchString)
   );
-  console.log(test);
-  console.log("THIS IS A NEW LINE DAMNIT");
+  // console.log(filtered);
+  var firstFive = filtered.slice(0, 5);
+  console.log(firstFive);
+  console.log(firstFive.length);
+
+  // console.log("THIS IS A NEW LINE DAMNIT");
 };
 
 handlers.notFound = function(req, res) {
