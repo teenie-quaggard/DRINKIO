@@ -1,6 +1,8 @@
 const handlers = (module.exports = {});
 const fs = require("fs");
 const path = require("path");
+const queryString = require("query-string");
+const beers = require("./beers.json");
 
 const headers = {
   html: { "content-type": "text/html" },
@@ -97,6 +99,12 @@ handlers.image = function(req, res) {
       res.end(file);
     }
   });
+};
+
+handlers.query = function(req, res) {
+  var searchString = queryString.parse(req.url)["/query"];
+  console.log(searchString);
+  console.log(beers["beers"][0].name.includes('i'));
 };
 
 handlers.notFound = function(req, res) {
