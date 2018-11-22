@@ -22,6 +22,12 @@ var beerCall = function(value) {
       console.log("api works");
       // var beersName = beers.name;
       // document.getElementById('beerInput').innerHTML = beerRequest.responseText;
+      var x = document.getElementById("beersDatalist");
+      beers.forEach(e => {
+        const newOption = document.createElement("OPTION");
+        newOption.setAttribute("value", e.name);
+        x.appendChild(newOption).value = beers.name.value;
+      });
     }
   };
 

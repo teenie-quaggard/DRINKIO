@@ -115,7 +115,6 @@ handlers.query = function(req, res) {
   var firstFive = filtered.slice(0, 5);
   console.log(firstFive);
   console.log(firstFive.length);
-  // console.log(typeof firstFive);
 
   res.writeHead(200, headers.json);
   res.end(JSON.stringify(firstFive));
