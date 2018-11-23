@@ -6,10 +6,8 @@ document.getElementById("beerInput").addEventListener("keyup", function(e) {
     const encode = encodeURIComponent(inputValue);
     return window.open(`https://www.google.co.uk/search?q=${encode}`);
   } else {
-    // console.log(e.keyCode);
-    var inputValue = document.getElementById("beerInput").value;
+    let inputValue = document.getElementById("beerInput").value;
 
-    console.log(inputValue);
     beerCall(inputValue);
   }
 });
@@ -29,21 +27,20 @@ var beerCall = function(value) {
   var beerUrl = "/query=" + value;
   beerRequest.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var x = document.getElementById("beersDatalist");
+      var datalistEntries = document.getElementById("beersDatalist");
 
-      while (x.firstChild) {
-        x.removeChild(x.firstChild);
+      while (datalistEntries.firstChild) {
+        datalistEntries.removeChild(datalistEntries.firstChild);
       }
       var beers = JSON.parse(beerRequest.responseText);
-      // var beersName = beers.name;
-      // document.getElementById('beerInput').innerHTML = beerRequest.responseText;
+
       var x = document.getElementById("beersDatalist");
       beers.forEach(e => {
         const newOption = document.createElement("OPTION");
         newOption.setAttribute("value", e.name);
         x.appendChild(newOption);
       });
-      if (!x.firstChild) {
+      if (!datalistEntries.firstChild) {
         document.getElementById("beerInput").style.backgroundColor = "#bd1313";
         document.getElementById("beerInput").style.color = "white";
       } else {
