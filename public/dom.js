@@ -27,10 +27,10 @@ var beerCall = function(value) {
   var beerUrl = "/query=" + value;
   beerRequest.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var x = document.getElementById("beersDatalist");
+      var datalistEntries = document.getElementById("beersDatalist");
 
-      while (x.firstChild) {
-        x.removeChild(x.firstChild);
+      while (datalistEntries.firstChild) {
+        datalistEntries.removeChild(datalistEntries.firstChild);
       }
       var beers = JSON.parse(beerRequest.responseText);
 
