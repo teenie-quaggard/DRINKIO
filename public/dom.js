@@ -40,7 +40,7 @@ var beerCall = function(value) {
         newOption.setAttribute("value", e.name);
         x.appendChild(newOption);
       });
-      if (!x.firstChild) {
+      if (!datalistEntries.firstChild) {
         document.getElementById("beerInput").style.backgroundColor = "#bd1313";
         document.getElementById("beerInput").style.color = "white";
       } else {
