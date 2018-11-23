@@ -84,4 +84,5 @@ node_modules
 
 ## TIME FOR BEERS! :beers: 
 
-![gif](https://giphy.com/gifs/head-gettin-zrj0yPfw3kGTS)
+![gif](https://media.giphy.com/media/zrj0yPfw3kGTS/giphy.gif)
+
