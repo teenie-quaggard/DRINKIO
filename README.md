@@ -30,6 +30,7 @@
 3. Realize that connecting to an API on top of writing the server is HARD
 4. Give up on that and create our own JSON file
 5. Slowly work through each step as a team 
+![](https://preview.ibb.co/g1nuaV/IMG-0550.jpg)
 
 <i>This was a REALLY hard project for all of us! It was helpful to whiteboard at the beginning in order to try to understand the flow of information from the frontside to server-side, but we were all still a bit confused. What was more helpful was to start building the project from the tiniest step (making an input box) and then walking through step at a time. We took turns writing code and commiting, which was a very slow way of working, but made sure that everyone was on board.</i>
 
