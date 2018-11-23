@@ -124,18 +124,15 @@ handlers.ico = function(req, res) {
 };
 
 handlers.query = function(req, res) {
-  var filtered = [];
-  var searchString = queryString.parse(req.url)["/query"].toLowerCase();
-  console.log(searchString);
+  let filtered = [];
+  const searchString = queryString.parse(req.url)["/query"].toLowerCase();
 
   //console.log(beers["beers"][0].name);
   filtered = beers["beers"].filter(beer =>
     beer.name.toLowerCase().includes(searchString)
   );
   // console.log(filtered);
-  var firstFive = filtered.slice(0, 5);
-  console.log(firstFive);
-  console.log(firstFive.length);
+  const firstFive = filtered.slice(0, 5);
 
   res.writeHead(200, headers.json);
   res.end(JSON.stringify(firstFive));
