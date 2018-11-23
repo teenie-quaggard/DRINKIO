@@ -6,10 +6,8 @@ document.getElementById("beerInput").addEventListener("keyup", function(e) {
     const encode = encodeURIComponent(inputValue);
     return window.open(`https://www.google.co.uk/search?q=${encode}`);
   } else {
-    // console.log(e.keyCode);
-    var inputValue = document.getElementById("beerInput").value;
+    let inputValue = document.getElementById("beerInput").value;
 
-    console.log(inputValue);
     beerCall(inputValue);
   }
 });
