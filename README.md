@@ -1,4 +1,4 @@
-# <b>DRINKIO💉 </b> 
+# :beer: <b>DRINKIO💉 </b> 
 ![gif](https://media.giphy.com/media/xUOwGdo2ncW9ETEEZG/giphy.gif)
 
 ## Installation 💾
