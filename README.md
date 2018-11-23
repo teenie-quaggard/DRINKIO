@@ -56,7 +56,7 @@ c. Handler - does all the dirty werk werk werk werk werk
 ### Proud of 🎯 
 1. Taking TONS of breaks
 2. Really working as a team and not independently
-3. Keeping light, even at the worst of times
+3. Keeping light, even at the worst of times<br>
 ![gif](https://media.giphy.com/media/BBkKEBJkmFbTG/giphy.gif)
 
 ### Stretch goals ⏳
