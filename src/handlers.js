@@ -125,17 +125,14 @@ handlers.ico = function(req, res) {
 
 handlers.query = function(req, res) {
   let filtered = [];
-  let searchString = queryString.parse(req.url)["/query"].toLowerCase();
-  console.log(searchString);
+  const searchString = queryString.parse(req.url)["/query"].toLowerCase();
 
   //console.log(beers["beers"][0].name);
   filtered = beers["beers"].filter(beer =>
     beer.name.toLowerCase().includes(searchString)
   );
   // console.log(filtered);
-  let firstFive = filtered.slice(0, 5);
-  console.log(firstFive);
-  console.log(firstFive.length);
+  const firstFive = filtered.slice(0, 5);
 
   res.writeHead(200, headers.json);
   res.end(JSON.stringify(firstFive));
