@@ -13,9 +13,9 @@ document.getElementById("beerInput").addEventListener("keyup", function(e) {
 });
 
 document.getElementById('beerSubmit').addEventListener('click', function(input){
-  const encode = encodeURIComponent(input);
+  const inputValue = document.getElementById("beerInput").value
+  const encode = encodeURIComponent(inputValue);
   return window.open(`https://www.google.co.uk/search?q=${encode}`);
-  console.log(encode);
 
 })
 // **************************** Main *************************************
