@@ -2,7 +2,9 @@
 
 document.getElementById("beerInput").addEventListener("keyup", function(e) {
   if (e.keyCode == 13) {
-    console.log("enter");
+    const inputValue = document.getElementById("beerInput").value;
+    const encode = encodeURIComponent(inputValue);
+    return window.open(`https://www.google.co.uk/search?q=${encode}`);
   } else {
     // console.log(e.keyCode);
     var inputValue = document.getElementById("beerInput").value;
@@ -12,12 +14,15 @@ document.getElementById("beerInput").addEventListener("keyup", function(e) {
   }
 });
 
-document.getElementById('beerSubmit').addEventListener('click', function(input){
-  const inputValue = document.getElementById("beerInput").value
-  const encode = encodeURIComponent(inputValue);
-  return window.open(`https://www.google.co.uk/search?q=${encode}`);
-
-})
+const search = () => {
+  document
+    .getElementById("beerSubmit")
+    .addEventListener("click", function(input) {
+      const inputValue = document.getElementById("beerInput").value;
+      const encode = encodeURIComponent(inputValue);
+      return window.open(`https://www.google.co.uk/search?q=${encode}`);
+    });
+};
 // **************************** Main *************************************
 var beerCall = function(value) {
   var beerRequest = new XMLHttpRequest();
