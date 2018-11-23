@@ -1,4 +1,5 @@
 # <b>DRINKIO💉 </b> 
+<iframe src="https://giphy.com/embed/xUOwGdo2ncW9ETEEZG" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xUOwGdo2ncW9ETEEZG"></a>...brought to you by Team Dab</p>
 
 ## Installation 💾
 1. Clone this repo: 
@@ -33,6 +34,7 @@
 <i>This was a REALLY hard project for all of us! It was helpful to whiteboard at the beginning in order to try to understand the flow of information from the frontside to server-side, but we were all still a bit confused. What was more helpful was to start building the project from the tiniest step (making an input box) and then walking through step at a time. We took turns writing code and commiting, which was a very slow way of working, but made sure that everyone was on board.</i>
 
 ### Difficulties :poop: 
+<iframe src="https://giphy.com/embed/nxuFTiUbYR3SE" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/80s-retro-1980s-nxuFTiUbYR3SE"></a></p>
 
 1. Understanding the flow of information
 2. Understanding how to link the files / modularize
@@ -41,6 +43,8 @@
 
 ### Things we learned! :monkey: 
 1. OMG is this AJAX...with our OWN server?
+
+![](https://i.imgur.com/tINtrV5.png)
 
 2. Really understanding how back-end files are supposed to be structured!
 a. Server - just set up a damn server!
@@ -53,6 +57,7 @@ c. Handler - does all the dirty werk werk werk werk werk
 1. Taking TONS of breaks
 2. Really working as a team and not independently
 3. Keeping light, even at the worst of times
+<iframe src="https://giphy.com/embed/BBkKEBJkmFbTG" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/stupid-homer-simpson-monkey-BBkKEBJkmFbTG"></a></p>
 
 ### Stretch goals ⏳
 1. Moving background (bubbling)
