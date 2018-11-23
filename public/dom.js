@@ -22,10 +22,7 @@ var beerCall = function(value) {
       while (x.firstChild) {
         x.removeChild(x.firstChild);
       }
-
       var beers = JSON.parse(beerRequest.responseText);
-      console.log(beers.length);
-      console.log("api works");
       // var beersName = beers.name;
       // document.getElementById('beerInput').innerHTML = beerRequest.responseText;
       var x = document.getElementById("beersDatalist");
@@ -34,6 +31,13 @@ var beerCall = function(value) {
         newOption.setAttribute("value", e.name);
         x.appendChild(newOption);
       });
+      if(!x.firstChild){
+          document.getElementById('beerInput').style.backgroundColor = '#bd1313';
+          document.getElementById('beerInput').style.color = 'white';
+        } else {
+          document.getElementById('beerInput').style.backgroundColor = 'white';
+        }
+
     }
   };
 
