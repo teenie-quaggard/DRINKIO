@@ -46,6 +46,21 @@ h2 {
 #beerSubmit:hover {
   color: #382c01;
   background-color: black 1px;
+
+  transition        : 1.0s ease all;
+  	-moz-transition   : 1.0s ease all;
+  	-webkit-transition: 1.0s ease all;
+
+  transform               : rotate(360deg);
+    -moz-transform          : rotate(360deg);
+    -webkit-transform       : rotate(360deg);
+    transform-origin        : center;
+    -moz-transform-origin   : center;
+    -webkit-transform-origin: center;
+
+  transition              : transform 1.0s ease all;
+    -moz-transition         : -moz-transform 1.0s ease all;
+    -webkit-transition      : -webkit-transform 1.0s ease all;
 }
 
 input[type="text"] {
