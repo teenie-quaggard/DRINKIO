@@ -9,6 +9,7 @@ const headers = {
   css: { "content-type": "text/css" },
   js: { "content-type": "application/javascript" },
   img: { "content-type": "image/jpg" },
+  ico: { "content-type": "image/x-icon" },
   json: { "content-type": "application/json" }
 };
 
@@ -18,7 +19,7 @@ handlers.home = function(req, res) {
     if (err) {
       console.log(err);
       res.writeHead(500, headers.html);
-      res.end("<h1>Sorry</h1>");
+      res.end("<h1>Sorry, html file is not working.</h1>");
     } else {
       res.writeHead(200, headers.html);
       res.end(file);
@@ -32,7 +33,7 @@ handlers.reset = function(req, res) {
     if (err) {
       console.log(err);
       res.writeHead(500, headers.css);
-      res.end("<h1>Sorry</h1>");
+      res.end("<h1>Sorry, reset css file is not working.</h1>");
     } else {
       res.writeHead(200, headers.css);
       res.end(file);
@@ -46,7 +47,7 @@ handlers.css = function(req, res) {
     if (err) {
       console.log(err);
       res.writeHead(500, headers.css);
-      res.end("<h1>Sorry</h1>");
+      res.end("<h1>Sorry, main css file is not working.</h1>");
     } else {
       res.writeHead(200, headers.css);
       res.end(file);
@@ -60,7 +61,7 @@ handlers.js = function(req, res) {
     if (err) {
       console.log(err);
       res.writeHead(500, headers.js);
-      res.end("<h1>Sorry</h1>");
+      res.end("<h1>Sorry, javascript is not working.</h1>");
     } else {
       res.writeHead(200, headers.js);
       res.end(file);
@@ -74,7 +75,7 @@ handlers.dom = function(req, res) {
     if (err) {
       console.log(err);
       res.writeHead(500, headers.js);
-      res.end("<h1>Sorry</h1>");
+      res.end("<h1>Sorry, javascript is not working.</h1>");
     } else {
       res.writeHead(200, headers.js);
       res.end(file);
@@ -94,9 +95,29 @@ handlers.image = function(req, res) {
     if (err) {
       console.log(err);
       res.writeHead(500, headers.img);
-      res.end("<h1>Sorry</h1>");
+      res.end("<h1>Sorry, background image is not working.</h1>");
     } else {
       res.writeHead(200, headers.img);
+      res.end(file);
+    }
+  });
+};
+
+handlers.ico = function(req, res) {
+  const filePath = path.join(
+    __dirname,
+    "..",
+    "public",
+    "image",
+    "favicon-beer.ico"
+  );
+  fs.readFile(filePath, (err, file) => {
+    if (err) {
+      console.log(err);
+      res.writeHead(500, headers.ico);
+      res.end("<h1>Sorry</h1>");
+    } else {
+      res.writeHead(200, headers.ico);
       res.end(file);
     }
   });

@@ -9,6 +9,7 @@ const routes = {
   "/main.js": handlers.js,
   "/dom.js": handlers.dom,
   "/image/background.jpg": handlers.image,
+  "/image/favicon-beer.ico": handlers.ico,
   "404": handlers.notFound
 };
 
