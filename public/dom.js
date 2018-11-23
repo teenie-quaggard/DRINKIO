@@ -38,13 +38,13 @@ var beerCall = function(value) {
         newOption.setAttribute("value", e.name);
         x.appendChild(newOption);
       });
-      if(!x.firstChild){
-          document.getElementById('beerInput').style.backgroundColor = '#bd1313';
-          document.getElementById('beerInput').style.color = 'white';
-        } else {
-          document.getElementById('beerInput').style.backgroundColor = 'white';
-        }
-
+      if (!x.firstChild) {
+        document.getElementById("beerInput").style.backgroundColor = "#bd1313";
+        document.getElementById("beerInput").style.color = "white";
+      } else {
+        document.getElementById("beerInput").style.backgroundColor = "white";
+        document.getElementById("beerInput").style.color = "black";
+      }
     }
   };
 
