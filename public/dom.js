@@ -33,8 +33,7 @@ var beerCall = function(value) {
         x.removeChild(x.firstChild);
       }
       var beers = JSON.parse(beerRequest.responseText);
-      // var beersName = beers.name;
-      // document.getElementById('beerInput').innerHTML = beerRequest.responseText;
+
       var x = document.getElementById("beersDatalist");
       beers.forEach(e => {
         const newOption = document.createElement("OPTION");
