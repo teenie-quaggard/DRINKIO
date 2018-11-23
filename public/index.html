@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href='reset.css' rel='stylesheet'></link>
     <link href='main.css' rel='stylesheet'></link>
+    <link rel='shortcut icon' type='image/x-icon' href='/image/favicon-beer.ico' />
     <link href="https://fonts.googleapis.com/css?family=Armata|Bowlby+One+SC|Pacifico" rel="stylesheet">
     <title>Drinkio</title>
   </head>
@@ -18,10 +19,15 @@
       <span id='time'>It's time for a </span><br />
         Drinkio!
     </h2>
-      <input id="beerInput" type="text" name="" value="" placeholder="Type ya beer here">
-      <input id="beerSubmit" type="submit" name="" value="submit">
+      <input list="beersDatalist" id="beerInput" type="text" name="" value="" placeholder="Type ya beer here">
+      <button id="beerSubmit" type="button" name="submit"><span class="fas fa-beer"></span></button>
+      <div id='noBeer'>NO BEERS FOR YOU!</div>
     </div>
+    <datalist id="beersDatalist">
+      <!-- <option value=""> -->
 
+
+    </datalist>
 
 
     <script src='main.js' type='text/javascript' async></script>

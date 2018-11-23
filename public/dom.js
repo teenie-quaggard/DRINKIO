@@ -17,11 +17,27 @@ var beerCall = function(value) {
   var beerUrl = "/query=" + value;
   beerRequest.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      var x = document.getElementById("beersDatalist");
+
+      while (x.firstChild) {
+        x.removeChild(x.firstChild);
+      }
       var beers = JSON.parse(beerRequest.responseText);
-      console.log(beers);
-      console.log("api works");
       // var beersName = beers.name;
       // document.getElementById('beerInput').innerHTML = beerRequest.responseText;
+      var x = document.getElementById("beersDatalist");
+      beers.forEach(e => {
+        const newOption = document.createElement("OPTION");
+        newOption.setAttribute("value", e.name);
+        x.appendChild(newOption);
+      });
+      if(!x.firstChild){
+          document.getElementById('beerInput').style.backgroundColor = '#bd1313';
+          document.getElementById('beerInput').style.color = 'white';
+        } else {
+          document.getElementById('beerInput').style.backgroundColor = 'white';
+        }
+
     }
   };
 
