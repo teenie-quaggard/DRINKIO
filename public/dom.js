@@ -11,6 +11,13 @@ document.getElementById("beerInput").addEventListener("keyup", function(e) {
     beerCall(inputValue);
   }
 });
+
+document.getElementById('beerSubmit').addEventListener('click', function(input){
+  const encode = encodeURIComponent(input);
+  return window.open(`https://www.google.co.uk/search?q=${encode}`);
+  console.log(encode);
+
+})
 // **************************** Main *************************************
 var beerCall = function(value) {
   var beerRequest = new XMLHttpRequest();
