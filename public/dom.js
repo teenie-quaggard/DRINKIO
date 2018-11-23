@@ -17,8 +17,14 @@ var beerCall = function(value) {
   var beerUrl = "/query=" + value;
   beerRequest.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      var x = document.getElementById("beersDatalist");
+
+      while (x.firstChild) {
+        x.removeChild(x.firstChild);
+      }
+
       var beers = JSON.parse(beerRequest.responseText);
-      console.log(beers);
+      console.log(beers.length);
       console.log("api works");
       // var beersName = beers.name;
       // document.getElementById('beerInput').innerHTML = beerRequest.responseText;
@@ -26,7 +32,7 @@ var beerCall = function(value) {
       beers.forEach(e => {
         const newOption = document.createElement("OPTION");
         newOption.setAttribute("value", e.name);
-        x.appendChild(newOption).value = beers.name.value;
+        x.appendChild(newOption);
       });
     }
   };
